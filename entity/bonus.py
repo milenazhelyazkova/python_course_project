@@ -3,7 +3,8 @@ from entity.tasks import Tasks
 
 class Bonus(Tasks):
 
-	def __init__(self, task, reward):
+	def __init__(self,id=None task, reward):
+		self.id = id
 		self.task = task
 		self.reward = reward
 
