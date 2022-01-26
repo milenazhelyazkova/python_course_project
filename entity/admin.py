@@ -1,5 +1,5 @@
 class Admin:
-	def __init__(self,id=None, name, psw):
+	def __init__(self,id=None, name=None, psw=None):
 		self.id = id
 		self.name = name
 		self.password = psw
