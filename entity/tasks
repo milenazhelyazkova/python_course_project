@@ -1,19 +1,10 @@
 class Tasks:
-    next_id = 0  # unique id sequence
-
-    @classmethod
-    def get_next_id(cls):
-        cls.next_id += 1
-        return cls.next_id
 
     def __init__(self, id=None, name=None, category=None, owners=tuple(), status=None,
                  minutes=None, days=tuple(), description=None):
-        # Tasks.next_id += 1
-        # self.__class__.next_id += 1
-        # self.id = self.__class__.get_next_id()
         self.id = id
         self.name = name
-        self.category = category # chose from existing categories?
+        self.category = category #how to chose from existing categories?
         self.owners = owners # how to chose from the existing users?
         self.status = status # chose from a list?
         self.minutes = minutes
