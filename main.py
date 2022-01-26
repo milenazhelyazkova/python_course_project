@@ -14,9 +14,9 @@ if __name__ == '__main__':
 	t5 = Tasks(id=None, name="clean kitchen floor",category="kitchen", minutes=15, description="clean with mop")
 	t6 = Tasks(id=None, name="wash dishes", category="kitchen", minutes=15, description="in the sink")
 
-	t7 = Tasks(id=None, name="party", category="entertainment",owners= ("bonus1",), description="in the wardrobe")
-	t8 = Tasks(id=None, name="sweet", category="food", owners=("bonus2",), description="only one")
-	t9 = Tasks(id=None, name="movie", category="entertainment", description="on cinema")
+	r1 = Rewards(id=None, name="party", category="entertainment",owners= ("bonus1",), description="in the wardrobe")
+	r2 = Rewards(id=None, name="sweet", category="food", owners=("bonus2",), description="only one")
+	r3 = Rewards(id=None, name="movie", category="entertainment", description="on cinema")
 	tasks = (t1, t2, t3)
 
 	tasks_repo = Repository()
@@ -26,9 +26,9 @@ if __name__ == '__main__':
 	for task in tasks_repo.find_all():
 		print(task)
 
-	b1 = Bonus(t4, "party")
-	b2 = Bonus(t5, "sweets")
-	b3 = Bonus(t6, "movie")
+	b1 = Bonus(None,t4, "party")
+	b2 = Bonus(None,t5, "sweets")
+	b3 = Bonus(None,t6, "movie")
 
 	bonus_tasks = (b1, b2, b3)
 	bonus_repo = Repository()
@@ -40,9 +40,7 @@ if __name__ == '__main__':
 		print(bonus)
 
 	print("\n...REWARDS...\n")
-	r1 = Rewards(t7)
-	r2 = Rewards(t8)
-	r3 = Rewards(t9)
+
 	rewards = (r1, r2, r3)
 
 	rewards_repo = Repository()
@@ -52,8 +50,8 @@ if __name__ == '__main__':
 	for reward in rewards_repo.find_all():
 		print(reward)
 
-	u1 = Users("Nikol", 7)
-	u2 = Users("Iva", 3)
+	u1 = Users(id=None,name="Nikol", age=7,my_minutes=0)
+	u2 = Users(id=None,name="Iva", age=3,my_minutes=0)
 
 	users = (u1,u2)
 	users_repo = Repository()
