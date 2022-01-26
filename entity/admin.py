@@ -1,5 +1,6 @@
 class Admin:
 	def __init__(self,id=None, name, psw):
+		self.id = id
 		self.name = name
 		self.password = psw
 	def display_users(self):
