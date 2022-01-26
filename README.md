@@ -1,14 +1,23 @@
 # python_course_project
+Idea:
+2 users (kids) are created by an admin. (mama)
+The admin creates tasks and assign them to an user. Every task has a minutes to be done.
+The admin creates bonus tasks with rewards, from which an user can chose.
+The admin creates rewards.
+The user can see his/her tasks and chose which to DO 
+The user can win rewards by selecting bonus tasks, or when DO tasks for 60 minutes.
+
+
 Tasks can be created, edited, deleted  by the admin, selected by the users
 
 A task has :
 1. id
 2. name
 3. category
-4. minutes
+4. minutes/ points
 5. owner
 6. picture ? #here or not
-7. status(None)(assigned) (selected)(done by user )(approved by admin)
+7. status(None)(assigned) (selected)(done by user )
 8. days
 9. description
 
@@ -26,10 +35,3 @@ A reward can be created, edit, deleted, assigned to a bonus task by the admin
 5.description
 
 User can be created , edited, deleted by the admin, selected by the user
-
-1. id() # needed or not?
-2. name
-3. age
-4. picture # here or not
-5. rewards earned
-6. tasks owned
