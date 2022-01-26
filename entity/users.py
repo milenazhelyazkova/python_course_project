@@ -1,5 +1,5 @@
 class Users:
-	def __init__(self,id=None, name, age, rewards=tuple(), tasks_owned=tuple(), my_minutes=0):
+	def __init__(self,id=None, name=None, age=None, rewards=tuple(), tasks_owned=tuple(), my_minutes=0):
 		self.id = id
 		self.name = name
 		self.age = age
