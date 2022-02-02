@@ -1,6 +1,5 @@
 from dao.user_repository import UserRepository
-from entity.admin import Admin
-from entity.user import Users
+from entity.user import User
 
 
 class LoginController:
@@ -8,15 +7,20 @@ class LoginController:
 		self._user_repo = user_repo
 		#self.users = {}  # do i need this?
 
-	def register(self):
+
+	def register(self, user:User):
 		""""allows to register a new user by providing all required user data as arguments"""
-		new_user = Admin(id=None, name="Milena", psw="AzSamMilena")
-		# check if name is not existing user
-		if not self._user_repo.find_by_user_name(new_user.name):
-			# self.users = self._user_repo.create(new_user)
-			self._user_repo.create(new_user)
+		# check if user_name is not existing
+		users_list = self._user_repo.find_all()
+		names = []
+		for u in users_list:
+			names.append(u.user_name)
+			print(names)
+		if user.user_name not in names:
+			self._user_repo.create(user)
+			print(f"A new user {user.user_name} is registered")
 		else:
-			print("A user with this name already exists")
+			print("A user with this user_name already exists")
 
 	# return self.users
 
@@ -33,3 +37,7 @@ class LoginController:
 
 	def get_logged_user(self):
 		""""returns the currently logged user if there is such, or None otherwise."""
+
+	def get_all_users(self):
+		"""returns all registered users"""
+		return self._user_repo.find_all()
