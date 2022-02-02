@@ -2,6 +2,7 @@ from controller.user_controller import UserController
 from dao.repository import Repository
 from dao.user_repository import UserRepository
 from entity.bonus import Bonus
+from entity.kid import Kid
 from entity.rewards import Rewards
 from entity.tasks import Tasks
 from entity.user import User
@@ -53,8 +54,8 @@ if __name__ == '__main__':
     for reward in rewards_repo.find_all():
         print(reward)
 
-    u1 = User(id=None, user_name="Nikol", age=7, my_minutes=0)
-    u2 = User(id=None, user_name="Iva", age=3, my_minutes=0)
+    u1 = Kid(id=None, user_name="Nikol", age=7, my_minutes=0)
+    u2 = Kid(id=None, user_name="Iva", age=3, my_minutes=0)
 
     users = (u1, u2)
     users_repo = UserRepository()
