@@ -28,6 +28,8 @@ class LoginController:
 		""" allows a registered user to login in the system by providing a valid username and password (credentials). \
 		If the provided credentials are not valid an InvalidUsernameOrPasswordException is raised by login method. \
 		If credentials are valid returns the logged User."""
+		
+		# i need a dictionary user_name : pwd with all registered users
 
 	def logout(self):
 		""""allows to logout the currently logged user"""
