@@ -5,11 +5,6 @@ if __name__ == '__main__':
 	users_repo = UserRepository()
 	login_controller = LoginController(users_repo)
 
-	# users_list = users_repo.find_all()
-	# user_pass = {}
-	# name = input("Enter user name: ")
-	# if name not in users_list:
-	# 	password = input("Enter password: ")
 ans = True
 while ans:
 	print("""
@@ -36,7 +31,7 @@ while ans:
 		# 		user_logged = login_controller.login(user,pwd)
 		# 		print(f"Welcome, {user}")
 		# 	exept:
-		# 		print("Pleace try again")
+		# 		print("Please try again")
 		print("\n Useg Loged in")
 	elif ans == "3":
 		# calling the logout() method of LoginController class.
