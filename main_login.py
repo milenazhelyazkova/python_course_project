@@ -49,7 +49,7 @@ while ans:
         # 	try:
         # 		user_logged = login_controller.login(user,pwd)
         # 		print(f"Welcome, {user}")
-        # 	exept:
+        # 	except:
         # 		print("Please try again")
         print("\n Useg Loged in")
     elif ans == "3":
